@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple Image</title>
+  </head>
+  <body>
+    <img
+      src="../assets/images/images (5) modals2.jpeg"
+      alt="roger"
+      id="jewelleryImage"
+    /><br />
+    <strong id="imgname">roger</strong><br />
+    <button type="button" onclick="change('one')" id="one">riya</button>
+    <button type="button" onclick="change('two')" id="two">luffy</button>
+    <button type="button" onclick="change('three')" id="three">preet</button>
+    <button type="button" onclick="change('four')" id="four">pooja</button>
+    <button type="button" onclick="change('five')" id="five">tamu</button>
+    <button type="button" onclick="change('six')" id="six">franky</button>
+
+    <script>
+      function change(val) {
+        let imgElement = document.getElementById("jewelleryImage");
+        let nameElement = document.getElementById("imgname");
+
+        switch (val) {
+          case "one":
+            imgElement.src = "../assets/images/download (6).jpeg";
+            nameElement.innerHTML = "riya";
+            break;
+          case "two":
+            imgElement.src = "../assets/images/download 1 ss.jpeg";
+            nameElement.innerHTML = "luffy";
+            break;
+          case "three":
+            imgElement.src = "../assets/images/download rahul.webp";
+            nameElement.innerHTML = "preet";
+            break;
+          case "four":
+            imgElement.src = "../assets/images/downloadpooja.webp";
+            nameElement.innerHTML = "pooja";
+            break;
+          case "five":
+            imgElement.src = "../assets/images/download tam.jpeg";
+            nameElement.innerHTML = "tamu";
+            break;
+          case "six":
+            imgElement.src = "../assets/images/images (5) modals2.jpeg";
+            nameElement.innerHTML = "sammu";
+            break;
+          default:
+            console.log("Invalid option");
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

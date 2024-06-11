@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text replacement</title>
+
+    <style>
+      * {
+        color: white;
+      }
+      #texarea {
+        width: 200px;
+        height: 200px;
+        float: left;
+        margin-right: 20px;
+        background-color: rgb(0, 139, 25);
+      }
+
+      .out {
+        background-color: rgb(227, 17, 17);
+        margin: auto;
+        width: 500px;
+        padding: 20px;
+        border: 2px solid blue;
+        overflow: auto;
+      }
+
+      button {
+        background: rgb(128, 0, 255);
+        margin-right: 20px;
+        border-radius: 20px;
+        border: 2px solid gray;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="out">
+      <form action="">
+        <textarea id="texarea"> </textarea>
+
+        <label for="">Enter replacement Text :</label>
+        <input type="text" id="replacement-text" />
+        <br /><br />
+
+        <label for="">Enter New Text :</label>
+        <input type="text" id="new-text" />
+        <br /><br />
+
+        <button type="button" оnclick="replace(`replace`)">Replace</button>
+        <button type="button" оnclick="replace(`replaceall`)">
+          ReplaceAll
+        </button>
+      </form>
+    </div>
+
+    <script>
+      function replace(txt) {
+        let str = document.getElementById("texarea").value;
+
+        let replacetxt = document.getElementById("replacement-text").value;
+
+        let newtxt = document.getElementById("new-text").value;
+
+        console.log(str);
+        console.log(replacetxt);
+        console.log(newtxt);
+        console.log(txt);
+
+        if (txt == "replace") {
+          console.log(newtxt);
+          document.getElementById("texarea").value = str.replace(
+            replacetxt,
+            newtxt
+          );
+        } else {
+          document.getElementById("texarea").value = str.replaceAll(
+            replacetxt,
+            newtxt
+          );
+        }
+      }
+    </script>
+  </body>
+</html>
